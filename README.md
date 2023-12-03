@@ -1,6 +1,6 @@
 # Smart contract collection for DeFi Lending
 
-## Block Borrower Smart contract
+## <span style="color:red">Block Borrower Smart contract</span>
 
 ### Introduction
 The `BlockBorrower` smart contract, implemented in Solidity, facilitates a range of decentralized finance (DeFi) activities. It enables the creation and management of banks, handling of loans with NFTs as collateral, and the execution of auctions in the event of loan defaults.
@@ -45,7 +45,7 @@ The `BlockBorrower` smart contract, implemented in Solidity, facilitates a range
 - **calculateDues**: Calculates the dues owed for a loan.
 
 
-## Auction Smart Contract
+## <span style="color:red">Auction Smart Contract</span>
 
 ### Introduction
 The `Auction` smart contract, implemented in Solidity, is designed to manage auctions for NFTs used as collateral in loans. It facilitates the entire auction process, including starting, finalizing, and canceling auctions, as well as placing bids.
@@ -68,7 +68,7 @@ The `Auction` smart contract, implemented in Solidity, is designed to manage auc
 - **getUsersBidValueForAuctionId**: Fetches the bid value placed by a user in a specific auction.
 - **bidderAlreadyExistsInBiddersList**: Checks if a bidder has already placed a bid in an auction.
 
-## Minter Smart Contract
+## <span style="color:red">Minter Smart Contract</span>
 
 ### Introduction
 The `Minter` smart contract is designed for the minting and management of Non-Fungible Tokens (NFTs) on the Ethereum blockchain. It extends the ERC721 standard and provides functionalities for minting NFTs, initiating and finalizing burns, and managing NFT details.
