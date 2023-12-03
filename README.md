@@ -5,6 +5,9 @@
 ### Introduction
 The `BlockBorrower` smart contract, implemented in Solidity, facilitates a range of decentralized finance (DeFi) activities. It enables the creation and management of banks, handling of loans with NFTs as collateral, and the execution of auctions in the event of loan defaults.
 
+### Architecture
+[Architecture of blockborrower and auction interaction](./assets/block_auction.png)
+
 ### Key Features
 
 #### Bank Management
@@ -72,6 +75,10 @@ The `Auction` smart contract, implemented in Solidity, is designed to manage auc
 
 ### Introduction
 The `Minter` smart contract is designed for the minting and management of Non-Fungible Tokens (NFTs) on the Ethereum blockchain. It extends the ERC721 standard and provides functionalities for minting NFTs, initiating and finalizing burns, and managing NFT details.
+
+### Architecture
+[Architecture of minter locker interaction](./assets/mint_lock.png)
+
 
 ### Key Features
 
