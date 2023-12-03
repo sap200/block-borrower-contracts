@@ -44,6 +44,31 @@ The `BlockBorrower` smart contract, implemented in Solidity, facilitates a range
 - **getRepaymentSchedules**: Fetches a loan's repayment schedule.
 - **calculateDues**: Calculates the dues owed for a loan.
 
-### Technology Stack
+
+## Auction Smart Contract
+
+### Introduction
+The `Auction` smart contract, implemented in Solidity, is designed to manage auctions for NFTs used as collateral in loans. It facilitates the entire auction process, including starting, finalizing, and canceling auctions, as well as placing bids.
+
+### Key Features
+
+#### Auction Management
+- **startAuction**: Initiates an auction for an NFT used as loan collateral.
+- **blackListUsersFromAuction**: Prevents specific users (such as bank lenders) from participating in the auction.
+- **finalizeAuctionBeforeTime**: Finalizes an ongoing auction ahead of its scheduled completion.
+- **cancelAuctionBeforeTime**: Cancels an ongoing auction before its scheduled end.
+- **checkIfAuctionHasExpired**: Checks if the auction time has expired and concludes it accordingly.
+- **takeAuctionDecision**: Internally used to decide the auction outcome, transferring the NFT to the highest bidder or retaining it with the bank.
+- **withdrawMoney**: Allows users to withdraw their bids from concluded auctions.
+- **placeBidForAuction**: Enables users to place bids on an active auction.
+
+#### Utility Functions
+- **getAllAuctionIdsForLoanId**: Retrieves all auction IDs associated with a specific loan ID.
+- **getAllBiddersList**: Lists all bidders participating in a specific auction.
+- **getUsersBidValueForAuctionId**: Fetches the bid value placed by a user in a specific auction.
+- **bidderAlreadyExistsInBiddersList**: Checks if a bidder has already placed a bid in an auction.
+
+
+## Technology Stack
 - Solidity for smart contract development.
 - OpenZeppelin contracts for ERC721 (NFT) implementations.
