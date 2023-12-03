@@ -68,6 +68,33 @@ The `Auction` smart contract, implemented in Solidity, is designed to manage auc
 - **getUsersBidValueForAuctionId**: Fetches the bid value placed by a user in a specific auction.
 - **bidderAlreadyExistsInBiddersList**: Checks if a bidder has already placed a bid in an auction.
 
+## Minter Smart Contract
+
+### Introduction
+The `Minter` smart contract is designed for the minting and management of Non-Fungible Tokens (NFTs) on the Ethereum blockchain. It extends the ERC721 standard and provides functionalities for minting NFTs, initiating and finalizing burns, and managing NFT details.
+
+### Key Features
+
+#### NFT Management
+- **startMintNFT**: Initiates the minting process for a new NFT.
+- **sendBackNFT**: Prepares an NFT for transfer back to its original chain by initiating the burn process.
+- **finalizeBurn**: Finalizes the burning of an NFT, effectively removing it from the blockchain.
+- **revertBurn**: Reverses the burn initiation process if needed, transferring the NFT back to its original owner.
+
+#### Utility Functions
+- **mintNFT**: Internal function for minting a new NFT.
+- **_transfer**: Overrides the ERC721 `_transfer` function to handle custom transfer logic.
+
+#### Events
+- **BurnInitiated**: Emitted when the burn process for an NFT is initiated.
+- **Burned**: Emitted when an NFT burn is finalized.
+- **Minted**: Emitted when a new NFT is minted.
+- **RevertedBurn**: Emitted when an NFT burn is reverted.
+
+#### Access Control
+- **onlyOwner**: A modifier to restrict certain functions to the contract owner.
+
+
 
 ## Technology Stack
 - Solidity for smart contract development.
