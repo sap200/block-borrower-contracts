@@ -94,7 +94,31 @@ The `Minter` smart contract is designed for the minting and management of Non-Fu
 #### Access Control
 - **onlyOwner**: A modifier to restrict certain functions to the contract owner.
 
+## Locker Smart Contract
 
+### Introduction
+The `Locker` smart contract, built on Solidity, is focused on managing the locking and unlocking process of Non-Fungible Tokens (NFTs). It facilitates secure NFT transfers across different blockchains by locking them into the contract until they are ready to be withdrawn or unlocked.
+
+### Key Features
+
+#### NFT Locking and Unlocking
+- **sendNFT**: Initiates the process of locking an NFT into the contract.
+- **finalizeLocking**: Finalizes the locking of an NFT, marking it as locked.
+- **finalizeUnlocking**: Finalizes the unlocking process, preparing the NFT for withdrawal.
+- **fallbackUnlocking**: Provides a fallback mechanism for unlocking NFTs in special cases.
+- **withdrawNFT**: Allows NFT owners to withdraw their NFTs once unlocked.
+
+#### Utility Functions
+- **checkIfTokenExists**: Checks if a specific token exists within the contract.
+- **checkIfNFTContractExists**: Verifies if a specific NFT contract address is registered in the contract.
+
+#### Events
+- **LockedNFT**: Emitted when an NFT is successfully locked.
+- **UnlockedNFT**: Emitted when an NFT is unlocked.
+- **WithdrawnNFT**: Emitted when an NFT is withdrawn from the contract.
+
+#### Access Control
+- **onlyOwner**: A modifier that restricts certain functions to the contract owner.
 
 ## Technology Stack
 - Solidity for smart contract development.
